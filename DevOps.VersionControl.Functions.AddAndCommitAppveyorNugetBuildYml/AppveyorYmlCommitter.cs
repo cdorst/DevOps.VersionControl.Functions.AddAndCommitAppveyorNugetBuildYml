@@ -8,7 +8,7 @@ namespace DevOps.VersionControl.Functions.AddAndCommitAppveyorNugetBuildYml
     {
         private const string CommitMessage = "Add appveyor.yml";
 
-        public static void AddAndCommitLicense(string repositoryDirectory, UserInfo? user = null)
+        public static void AddAndCommitAppveyorYml(string repositoryDirectory, UserInfo? user = null)
         {
             SaveAppveyorYml(repositoryDirectory);
             AddAndCommitChanges(repositoryDirectory, CommitMessage, user);
