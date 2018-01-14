@@ -1,7 +1,21 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
+
+  <PropertyGroup>
+    <Authors>cdorst</Authors>
+    <Description>Helper for adding and committing an AppVeyor build definition that builds .NET Core projects and deploys .nupkg files to an environment called CDorstNuGet to a repository root directory</Description>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>CDorst.DevOps.VersionControl.Functions.AddAndCommitAppveyorNugetBuildYml</PackageId>
+    <Version>1.0.0</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CDorst.DevOps.VersionControl.Functions.AddAndCommitGitChanges" Version="2.0.0" />
+    <PackageReference Include="CDorst.Metaproject.Cdn.Containers.Build.Helpers" Version="2.0.0" />
+  </ItemGroup>
 
 </Project>
